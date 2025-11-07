@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: radial-gradient(circle at top left, rgba(144, 66, 255, 0.25), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(32, 10, 53, 0.5), transparent 55%),
+    #0b0711;
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
+
+.tagline-shimmer {
+  background: linear-gradient(90deg, rgba(198, 163, 255, 0.1), rgba(144, 66, 255, 0.35), rgba(198, 163, 255, 0.1));
+  background-size: 200% 200%;
+  animation: shimmer 6s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.orbital {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(50px);
+  opacity: 0.8;
+}
+
+.orbital-primary {
+  background: radial-gradient(circle, rgba(94, 23, 235, 0.65) 0%, rgba(110, 45, 238, 0.15) 70%, transparent 100%);
+}
+
+.orbital-secondary {
+  background: radial-gradient(circle, rgba(144, 66, 255, 0.45) 0%, rgba(144, 66, 255, 0) 70%);
+}
